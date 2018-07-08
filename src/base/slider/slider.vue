@@ -54,6 +54,9 @@ export default {
       this.slider.refresh()
     })
   },
+  destroyed () {
+    clearTimeout(this.timer)
+  },
   methods: {
     _setSliderWidth (isResize) {
       // 获取当前组件中sliderGroup的chilidren数

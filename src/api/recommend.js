@@ -3,7 +3,7 @@ import {commonParams, options} from './config'
 import axios from 'axios'
 export function getRecommend () {
   const url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
-
+  // Object.assign将多个对象组合在一起
   const data = Object.assign({}, commonParams, {
     platform: 'h5',
     uin: 0,

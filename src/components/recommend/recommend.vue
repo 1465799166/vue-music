@@ -63,7 +63,7 @@ export default {
     _getRecommend () {
       getRecommend().then((res) => {
         if (res.code === ERR_OK) {
-          console.log(res.data.slider)
+          // console.log(res.data.slider)
           this.recommends = res.data.slider
         }
       })
@@ -72,7 +72,7 @@ export default {
       getDiscList().then((res) => {
         if (res.code === ERR_OK) {
           this.discList = res.data.list
-          // console.log(res.data.list)
+          console.log(res.data.list)
         }
       })
     }
@@ -106,7 +106,7 @@ export default {
           /* item使用flex布局 */
           display: flex
           box-sizing: border-box
-          /* item内部的元素在交叉轴上中心对齐（即水平居中） */
+          /* item内部的元素在交叉轴上中心对齐（即垂直居中） */
           align-items: center
           padding: 0 20px 20px 20px
           .icon
@@ -119,7 +119,7 @@ export default {
             display: flex
             /* 主轴方向为colum */
             flex-direction: column
-            /* text内部元素在主轴上中心对齐（即垂直居中） */
+            /* text内部元素在主轴上中心对齐（即水平居中） */
             justify-content: center
             /* 等价于flex:1 1 auto ，即存在剩余空间时放大，且由于icon设置flex-shrink为0，导致text在空间不足时优先缩小，auto自动补充多余空间 */
             flex: 1
